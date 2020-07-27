@@ -11,3 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source "$ZPREZTODIR/powerlevel10k/powerlevel10k.zsh-theme"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Aliases
+if [ -f "${ZDOTDIR:-$HOME}/.zprezto/.aliases" ]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/.aliases"
+fi
